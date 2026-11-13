@@ -1,4 +1,4 @@
-const CACHE = 'pocket-tracker-v20-2';
+const CACHE = 'pocket-tracker-v21-0';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './cat-avatar.png', './assets/celebrations/cash-cat.png', './assets/celebrations/crying-money.png', './assets/celebrations/empty-plate.png', './assets/celebrations/wallet-cat.png', './assets/celebrations/money-hype.png', './assets/celebrations/cool-money.png', './assets/celebrations/tongue-out.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));

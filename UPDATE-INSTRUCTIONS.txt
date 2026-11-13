@@ -1,18 +1,21 @@
-POCKET TRACKER v20.2 — iPHONE SWIPE & CELEBRATION FIX
+POCKET TRACKER V21.0 — CLEAN PURCHASE DATE + NEW GRADIENT THEMES
 
-Includes two fixes together:
-1. Reaction popup: preloads/decodes one image before displaying, so the previous emoji should not flash first. Keeps the 3.7-second display and smooth fade-out.
-2. Horizontal swipe: prevents the page from shifting left/right while keeping vertical scroll and pinch zoom.
+FILES TO REPLACE: index.html and sw.js in the main/root folder of your GitHub repository.
+Do not move the assets/celebrations folder or any app icons.
 
-Update GitHub (2 files only):
-1. Export a backup from app Settings as precaution.
-2. Open your repository ROOT (where index.html currently is).
-3. Add file > Upload files; upload only index.html and sw.js from this ZIP.
-4. Commit changes. Confirm your Pages deployment completes.
-5. On the live website, check the footer says v20.2. Test Log Spending and a sideways swipe.
-6. On iPhone, if still on older version, use Settings > Check for updates, fully close and reopen app.
+WHAT CHANGED
+• Purchase date: compact, left-aligned label and calendar icon; tapping opens the native date picker.
+• Settings > Profile > App colour: added Sunset orange and Fresh green gradients.
+• Previous white, purple and grey themes remain, as do your saved name and spending records.
+• Both new themes have coloured gradients on the background, main action buttons, progress bars and UOB card.
+• Kept V20.2's single reaction popup, soft fade-out and horizontal swipe fixes.
 
-KEEP all your seven images in assets/celebrations/; don't rename or delete them.
-No need to reinstall the iPhone Home Screen app. Existing spending records and settings should stay in local storage.
+UPDATE GITHUB
+1. Open Pocket Tracker Settings > Backup & other options > Export backup (recommended).
+2. Extract ZIP. Go to the repo main folder. Add file > Upload files.
+3. Upload index.html and sw.js and commit changes, replacing the two existing files.
+4. Check GitHub Pages deployment, then load the site/app. Footer should say v21.0.
+5. In Settings > Profile, choose Sunset orange or Fresh green, then Save settings.
+6. Open Log spending and tap Purchase date. Confirm the iPhone date picker opens.
 
-NOTE: iOS Safari can still own system-level edge-swipe navigation outside a standalone Home Screen app. This fix addresses in-page horizontal drift, not Apple system gestures.
+If your installed Home Screen app still shows v20.2, use its check for updates option, then close/reopen it. Avoid deleting the app / clearing storage before exporting a backup.
