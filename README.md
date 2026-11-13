@@ -1,4 +1,4 @@
-# Pocket Tracker v16
+# Pocket Tracker v21
 
 - Adds Hong Leong Wise reward tracker (RM1,000 posted calendar-month threshold, category caps and rates).
 - Collapsible settings: Profile, My cards (show/hide and billing dates), History & backup.
