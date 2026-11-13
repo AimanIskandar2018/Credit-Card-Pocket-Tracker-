@@ -1,19 +1,18 @@
-# Pocket Tracker V20 — Celebration image update
+POCKET TRACKER v20.2 — iPHONE SWIPE & CELEBRATION FIX
 
-This ZIP contains `index.html`, `sw.js`, and **seven transparent celebration PNGs** in `assets/celebrations/`.
+Includes two fixes together:
+1. Reaction popup: preloads/decodes one image before displaying, so the previous emoji should not flash first. Keeps the 3.7-second display and smooth fade-out.
+2. Horizontal swipe: prevents the page from shifting left/right while keeping vertical scroll and pinch zoom.
 
-## Update GitHub Pages safely
+Update GitHub (2 files only):
+1. Export a backup from app Settings as precaution.
+2. Open your repository ROOT (where index.html currently is).
+3. Add file > Upload files; upload only index.html and sw.js from this ZIP.
+4. Commit changes. Confirm your Pages deployment completes.
+5. On the live website, check the footer says v20.2. Test Log Spending and a sideways swipe.
+6. On iPhone, if still on older version, use Settings > Check for updates, fully close and reopen app.
 
-1. In your currently installed app, **Settings → History & Backup → Export backup**, before making changes.
-2. In your GitHub repository, create `assets/celebrations/` if it does not exist. GitHub website method:
-   - **Add file → Create new file**
-   - Filename: `assets/celebrations/.gitkeep`
-   - Type `placeholder` as the content, then **Commit changes**.
-3. Open that new **assets/celebrations** folder in GitHub, choose **Add file → Upload files**, and upload the seven PNG images from this ZIP's `assets/celebrations` directory. Commit.
-4. Go back to the repository's ROOT (next to README.md), choose **Add file → Upload files**, upload the new **index.html** and **sw.js**. Commit.
-5. Check the site for **v20.0** and log a small test purchase. Confirm the popup appears, shows the amount/category/card, then fades out after about 4.3 seconds. Verify all seven images eventually load.
-6. **Only after confirming V20 is working**, you may delete these three OLD root images: `celebrate-cat.png`, `celebrate-cry.png`, `celebrate-plate.png`. For each, click the file → top-right **...** / trash **Delete file** → **Commit changes**. Do NOT delete `cat-avatar.png`, `icon-192.png`, `icon-512.png`, or `apple-touch-icon.png`.
+KEEP all your seven images in assets/celebrations/; don't rename or delete them.
+No need to reinstall the iPhone Home Screen app. Existing spending records and settings should stay in local storage.
 
-**Note:** Do not upload the ZIP file itself, nor any folder named `pocket-tracker-v20` into the repository. Only the files in the paths above. `.gitkeep` can stay in the folder; it's harmless.
-
-Cashback calculations and local storage are unchanged from V19. Existing local data should remain, but export a backup first. GitHub Pages deployment/installed PWA caches may delay changes; reload the live site and check the version number.
+NOTE: iOS Safari can still own system-level edge-swipe navigation outside a standalone Home Screen app. This fix addresses in-page horizontal drift, not Apple system gestures.
