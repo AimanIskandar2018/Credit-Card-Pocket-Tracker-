@@ -1,0 +1,19 @@
+# Pocket Tracker V20 — Celebration image update
+
+This ZIP contains `index.html`, `sw.js`, and **seven transparent celebration PNGs** in `assets/celebrations/`.
+
+## Update GitHub Pages safely
+
+1. In your currently installed app, **Settings → History & Backup → Export backup**, before making changes.
+2. In your GitHub repository, create `assets/celebrations/` if it does not exist. GitHub website method:
+   - **Add file → Create new file**
+   - Filename: `assets/celebrations/.gitkeep`
+   - Type `placeholder` as the content, then **Commit changes**.
+3. Open that new **assets/celebrations** folder in GitHub, choose **Add file → Upload files**, and upload the seven PNG images from this ZIP's `assets/celebrations` directory. Commit.
+4. Go back to the repository's ROOT (next to README.md), choose **Add file → Upload files**, upload the new **index.html** and **sw.js**. Commit.
+5. Check the site for **v20.0** and log a small test purchase. Confirm the popup appears, shows the amount/category/card, then fades out after about 4.3 seconds. Verify all seven images eventually load.
+6. **Only after confirming V20 is working**, you may delete these three OLD root images: `celebrate-cat.png`, `celebrate-cry.png`, `celebrate-plate.png`. For each, click the file → top-right **...** / trash **Delete file** → **Commit changes**. Do NOT delete `cat-avatar.png`, `icon-192.png`, `icon-512.png`, or `apple-touch-icon.png`.
+
+**Note:** Do not upload the ZIP file itself, nor any folder named `pocket-tracker-v20` into the repository. Only the files in the paths above. `.gitkeep` can stay in the folder; it's harmless.
+
+Cashback calculations and local storage are unchanged from V19. Existing local data should remain, but export a backup first. GitHub Pages deployment/installed PWA caches may delay changes; reload the live site and check the version number.
